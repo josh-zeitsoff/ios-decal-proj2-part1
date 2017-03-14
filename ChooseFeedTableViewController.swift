@@ -13,12 +13,17 @@ class ChooseFeedTableViewController: UITableViewController {
     //need to do alert when posted
     //take back to image picker when sent
     //put image on button
-    
+    var passedInImage = UIImage()
+    let feedNames = ["Memes", "Dog Spots", "Random"]
     @IBOutlet weak var selectedFeed: UITextField!
     @IBOutlet weak var ChooseFeedTableView: UITableView!
     
-    @IBOutlet weak var feedToPostTo: UITextField!
+    
+    @IBOutlet weak var feedName: UILabel!
+    
     @IBAction func postButton(_ sender: Any) {
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,26 +44,33 @@ class ChooseFeedTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return
     }
+ */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseFeedCell", for: indexPath) as! ChooseFeedTableViewCell
+        feedName.text = feedNames[indexPath.row]
         // Configure the cell...
-
         return cell
     }
-    */
+    
+    func tableView(_ tableView: UITableView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+               
+    }
+   
+    
 
     /*
     // Override to support conditional editing of the table view.

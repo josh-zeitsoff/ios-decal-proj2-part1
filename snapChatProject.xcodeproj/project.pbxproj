@@ -22,6 +22,7 @@
 		5B4F79FD1E77C5BD00FB1BF9 /* FeedMemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F79FC1E77C5BD00FB1BF9 /* FeedMemeTableViewCell.swift */; };
 		5B4F79FF1E77C5CB00FB1BF9 /* DogSpotFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F79FE1E77C5CB00FB1BF9 /* DogSpotFeedTableViewCell.swift */; };
 		5B4F7A011E77C6A000FB1BF9 /* FeedRandomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F7A001E77C6A000FB1BF9 /* FeedRandomTableViewCell.swift */; };
+		5B7570021E787FD9006AC895 /* ChooseFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7570011E787FD9006AC895 /* ChooseFeedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		5B4F79FC1E77C5BD00FB1BF9 /* FeedMemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedMemeTableViewCell.swift; sourceTree = "<group>"; };
 		5B4F79FE1E77C5CB00FB1BF9 /* DogSpotFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogSpotFeedTableViewCell.swift; sourceTree = "<group>"; };
 		5B4F7A001E77C6A000FB1BF9 /* FeedRandomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedRandomTableViewCell.swift; sourceTree = "<group>"; };
+		5B7570011E787FD9006AC895 /* ChooseFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFeedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				417986C81E664AE40050E1DF /* imageCollectionVieCell.swift */,
+				5B7570011E787FD9006AC895 /* ChooseFeedTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				417986CB1E664CB60050E1DF /* ImageFlowLayout.swift in Sources */,
 				5B4F79FD1E77C5BD00FB1BF9 /* FeedMemeTableViewCell.swift in Sources */,
 				4196F2E31E6514EE009916E4 /* ImagePickerController.swift in Sources */,
+				5B7570021E787FD9006AC895 /* ChooseFeedTableViewCell.swift in Sources */,
 				5B4F79F91E77BC8700FB1BF9 /* ChooseFeedTableViewController.swift in Sources */,
 				5B4F7A011E77C6A000FB1BF9 /* FeedRandomTableViewCell.swift in Sources */,
 				417986C51E6632C40050E1DF /* TabBarController.swift in Sources */,

@@ -32,7 +32,8 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! ChooseFeedTableViewController
-        //pass imageToPost
+        dest.passedInImage = imageToPost
+        
     }
     
     

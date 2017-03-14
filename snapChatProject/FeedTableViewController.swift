@@ -9,12 +9,17 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
+    
+    let feedNames = ["Memes", "Dog Spots", "Random"]
+    let posts = [[], [], []]
 
     @IBOutlet var FeedTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         FeedTableView.delegate = self
         FeedTableView.dataSource = self
+        //add item passed in to posts
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,26 +33,38 @@ class FeedTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return feedNames.count
+    }
+ 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return feedNames[section]
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return posts[section].count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        //cell.name =
+        //cell.time =
+        //cell.viewed =
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //display image
+        //erase image
+        //set to viewed
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
