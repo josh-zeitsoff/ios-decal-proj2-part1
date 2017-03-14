@@ -125,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="fDc-ft-p3l" customClass="FeedMemeTableViewCell" customModule="snapChatProject" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="115" id="fDc-ft-p3l" customClass="FeedTableViewCell" customModule="snapChatProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fDc-ft-p3l" id="Lhj-xI-YLX">
@@ -147,7 +147,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-eF-QGn">
-                                            <rect key="frame" x="19" y="48" width="45" height="58"/>
+                                            <rect key="frame" x="10" y="24" width="67" height="66"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -156,73 +156,9 @@
                                     <outlet property="memeName" destination="rHC-2O-cVa" id="brb-JQ-gJ9"/>
                                     <outlet property="memeTime" destination="iRV-y9-Vhx" id="fwr-nU-TQW"/>
                                     <outlet property="memeViewed" destination="xeu-eF-QGn" id="vYD-WB-9lq"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="4mh-ND-d94" customClass="DogSpotFeedTableViewCell" customModule="snapChatProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="143" width="375" height="115"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4mh-ND-d94" id="ydp-kk-mdS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzz-EN-Haa">
-                                            <rect key="frame" x="84" y="47" width="103" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxb-Rj-yyk">
-                                            <rect key="frame" x="85" y="85" width="118" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NCP-1w-qEt">
-                                            <rect key="frame" x="19" y="48" width="45" height="58"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dogspotName" destination="Mzz-EN-Haa" id="Uv9-8c-oy0"/>
-                                    <outlet property="dogspotTime" destination="Lxb-Rj-yyk" id="kZa-4B-Wa4"/>
-                                    <outlet property="dogspotViewed" destination="NCP-1w-qEt" id="hnX-ig-16x"/>
-                                    <outlet property="memeViewed" destination="NCP-1w-qEt" id="5gD-a4-xB0"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="Pqq-7n-s7r" customClass="FeedRandomTableViewCell" customModule="snapChatProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="258" width="375" height="115"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pqq-7n-s7r" id="w9T-nt-o1A">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVo-5j-1pb">
-                                            <rect key="frame" x="84" y="47" width="103" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHi-RJ-TIB">
-                                            <rect key="frame" x="85" y="85" width="118" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MjF-Cz-mpQ">
-                                            <rect key="frame" x="19" y="48" width="45" height="58"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="randomName" destination="GVo-5j-1pb" id="NwD-Cp-8b2"/>
-                                    <outlet property="randomTime" destination="XHi-RJ-TIB" id="nba-Se-Qgo"/>
-                                    <outlet property="randomViewed" destination="MjF-Cz-mpQ" id="XMc-Be-GI4"/>
+                                    <outlet property="snapImage" destination="xeu-eF-QGn" id="OQk-eP-dHh"/>
+                                    <outlet property="snapName" destination="rHC-2O-cVa" id="mXb-Mp-xjJ"/>
+                                    <outlet property="snapTime" destination="iRV-y9-Vhx" id="zeS-x8-JBi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

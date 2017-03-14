@@ -1,19 +1,18 @@
 //
-//  FeedRandomTableViewCell.swift
+//  FeedTableViewCell.swift
 //  snapChatProject
 //
-//  Created by Joshua Zeitsoff on 3/13/17.
+//  Created by Joshua Zeitsoff on 3/14/17.
 //  Copyright © 2017 org.iosdecal. All rights reserved.
 //
 
 import UIKit
 
-class FeedRandomTableViewCell: UITableViewCell {
+class FeedTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var randomName: UILabel!
-    @IBOutlet weak var randomTime: UILabel!
-    @IBOutlet weak var randomViewed: UIImageView!
-    
+    @IBOutlet weak var viewedImage: UIImageView!
+    @IBOutlet weak var snapTime: UILabel!
+    @IBOutlet weak var snapName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +20,7 @@ class FeedRandomTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        randomViewed.image = UIImage(named: "read")
+
         // Configure the view for the selected state
     }
 

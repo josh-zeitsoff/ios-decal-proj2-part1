@@ -50,14 +50,21 @@ class FeedTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        //cell.name =
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedTableViewCell
+        cell.snapName.text = posts[indexPath.section][indexPath.row]
         //cell.time =
-        //cell.viewed =
+        cell.viewedImage.image = UIImage(named: "unread")
         // Configure the cell...
 
         return cell
     }
+    
+    //unwind stuff remember to link
+    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        <#code#>
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //display image

@@ -22,15 +22,24 @@ class ChooseFeedTableViewController: UITableViewController {
     @IBOutlet weak var feedName: UILabel!
     
     @IBAction func postButton(_ sender: Any) {
+        ImageFeed.threads[selectedFeed].append(passedInImage)
         
         
     }
+    
+    override func reloadData() {}
+    
+    //prepare for unwind segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ChooseFeedTableView.delegate = self
         ChooseFeedTableView.dataSource = self
         
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
