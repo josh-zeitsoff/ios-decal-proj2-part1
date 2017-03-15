@@ -13,7 +13,7 @@ class Snap {
     var posterName: String?
     var snapImage: UIImage?
     var timeStamp: NSDate?
-    var seen: Bool?
+    var seen = false;
     
     init(name : String, image: UIImage) {
         self.posterName = name
@@ -23,14 +23,14 @@ class Snap {
     }
     
     func start() {
-        if (!seen!) {
+        if (!seen) {
             timeStamp = NSDate()
         }
     }
     
     var time : TimeInterval {
         if let startDate = self.timeStamp {
-            return -startDate.timeIntervalSinceNow;
+            return -startDate.timeIntervalSinceNow/60;
         }
         return 0
         

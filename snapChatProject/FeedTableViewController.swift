@@ -24,6 +24,10 @@ class FeedTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func viewWillAppear() {
+        self.FeedTableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,15 +59,24 @@ class FeedTableViewController: UITableViewController {
         let snap = threads[threadNames[indexPath.section]]?[indexPath.row]
         cell.snapName.text = "Josh"
         cell.snapTime.text = String(Int((snap?.time)!)) + " minutes"
+        if (snap!.seen) {
+        cell.viewedImage.image = UIImage(named: "read")
+        }
+        else {
+        cell.viewedImage.image = UIImage(named: "unread")
+        }
                 //cell.image = snap?.snapImage
         // Configure the cell...
         return cell
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let snap = threads[threadNames[indexPath.section]]?[indexPath.row]
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        threads[threadNames[indexPath.section]]?[indexPath.row].seen = true
+        self.FeedTableView.reloadData()
+        //let img = UIViewController
+        //img.image = snap?.snapImage
+        //self.present(img, animated: false)
         //display image
         //erase image
         //set to viewed

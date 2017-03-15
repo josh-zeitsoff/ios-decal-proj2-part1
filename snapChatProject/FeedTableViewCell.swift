@@ -10,6 +10,7 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var viewedImage: UIImageView!
     @IBOutlet weak var snapTime: UILabel!
     @IBOutlet weak var snapName: UILabel!
