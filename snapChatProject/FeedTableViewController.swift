@@ -9,11 +9,9 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
-    
-    let feedNames = ["Memes", "Dog Spots", "Random"]
-    let posts = [[], [], []]
-
+   
     @IBOutlet var FeedTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         FeedTableView.delegate = self
@@ -54,18 +52,17 @@ class FeedTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedTableViewCell
+        let snap = threads[threadNames[indexPath.section]]?[indexPath.row]
         cell.snapName.text = "Josh"
-        cell.snapTime.text = "100"
+        cell.snapTime.text = String(Int((snap?.time)!)) + " minutes"
+                //cell.image = snap?.snapImage
         // Configure the cell...
-
         return cell
     }
     
     
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let snap = threads[threadNames[indexPath.section]]?[indexPath.row]
         
         //display image
         //erase image

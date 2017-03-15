@@ -15,10 +15,9 @@ class Snap {
     var timeStamp: NSDate?
     var seen: Bool?
     
-    init(name : String, image: UIImage, time: NSDate) {
+    init(name : String, image: UIImage) {
         self.posterName = name
         self.snapImage = image
-        self.timeStamp = time
         self.seen = false
     
     }

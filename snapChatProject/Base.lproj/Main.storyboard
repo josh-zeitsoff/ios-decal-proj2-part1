@@ -120,31 +120,31 @@
         <scene sceneID="7s5-5S-kHR">
             <objects>
                 <tableViewController id="FH0-fk-S5p" customClass="FeedTableViewController" customModule="snapChatProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" id="jlj-TG-g6t">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="jlj-TG-g6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="115" id="fDc-ft-p3l" customClass="FeedTableViewCell" customModule="snapChatProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="115"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="66" id="fDc-ft-p3l" customClass="FeedTableViewCell" customModule="snapChatProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fDc-ft-p3l" id="Lhj-xI-YLX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHC-2O-cVa">
-                                            <rect key="frame" x="111" y="24" width="103" height="21"/>
+                                            <rect key="frame" x="77" y="0.0" width="103" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unread" translatesAutoresizingMaskIntoConstraints="NO" id="xeu-eF-QGn">
-                                            <rect key="frame" x="10" y="24" width="67" height="66"/>
+                                            <rect key="frame" x="8" y="13" width="40" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRV-y9-Vhx">
-                                            <rect key="frame" x="111" y="69" width="118" height="21"/>
+                                            <rect key="frame" x="77" y="29" width="118" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -153,10 +153,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="memeName" destination="rHC-2O-cVa" id="brb-JQ-gJ9"/>
-                                    <outlet property="memeTime" destination="iRV-y9-Vhx" id="fwr-nU-TQW"/>
-                                    <outlet property="memeViewed" destination="xeu-eF-QGn" id="vYD-WB-9lq"/>
-                                    <outlet property="snapImage" destination="xeu-eF-QGn" id="OQk-eP-dHh"/>
                                     <outlet property="snapName" destination="rHC-2O-cVa" id="mXb-Mp-xjJ"/>
                                     <outlet property="snapTime" destination="iRV-y9-Vhx" id="zeS-x8-JBi"/>
                                 </connections>
@@ -169,7 +165,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="MhB-KQ-xjk"/>
                     <connections>
-                        <outlet property="FeedTableView" destination="jlj-TG-g6t" id="UDW-W2-bPe"/>
+                        <outlet property="FeedTableView" destination="jlj-TG-g6t" id="UYH-IC-oAm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dk2-um-FNh" userLabel="First Responder" sceneMemberID="firstResponder"/>

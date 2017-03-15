@@ -16,19 +16,19 @@ class ChooseFeedTableViewController: UIViewController, UITableViewDataSource, UI
     var img: UIImage?
 
     
-    
+    var snap: Snap?
     
     @IBOutlet weak var selectedFeed: UILabel!
-    
     
     @IBOutlet weak var ChooseFeedTableView: UITableView!
     
     
     @IBAction func postButton(_ sender: Any) {
         let alert = UIAlertController(title: "PostingSnap", message: "Posted!", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler:{
+        (_) in self.performSegue(withIdentifier: "unwindChooseFeedToImagePicker", sender: self)
+        }))
         self.present(alert, animated: true, completion: nil)
-        performSegue(withIdentifier: "unwindChooseFeedToImagePicker", sender: self)
     }
     
     
@@ -76,9 +76,10 @@ class ChooseFeedTableViewController: UIViewController, UITableViewDataSource, UI
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let typeToAdd = threadNames[indexPath.row]
         selectedFeed.text = typeToAdd
-        threads[typeToAdd]!.append(img!)
+        snap = Snap(name: "Josh", image: img!)
+        snap!.start()
+        threads[typeToAdd]!.append(snap!)
         
-               
     }
    
     
