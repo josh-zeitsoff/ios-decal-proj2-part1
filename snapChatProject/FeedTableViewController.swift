@@ -25,7 +25,7 @@ class FeedTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    func viewWillAppear() {
+    override func viewWillAppear(_ animated: Bool) {
         self.FeedTableView.reloadData()
     }
 
