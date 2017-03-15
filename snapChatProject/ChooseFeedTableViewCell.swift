@@ -10,6 +10,11 @@ import UIKit
 
 class ChooseFeedTableViewCell: UITableViewCell {
 
+    
+    
+    
+    @IBOutlet weak var feedName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

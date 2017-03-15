@@ -21,12 +21,4 @@ class TabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! FeedTableViewController
-        
     }
-    
-    func performSegue(withIdentifier: "TabBarToFeed", sender: self) {
-        
-    }
-}

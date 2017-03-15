@@ -8,31 +8,30 @@
 
 import UIKit
 
-class ChooseFeedTableViewController: UITableViewController {
+class ChooseFeedTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    //need to do alert when posted
+    
     //take back to image picker when sent
     //put image on button
-    var passedInImage = UIImage()
-    let feedNames = ["Memes", "Dog Spots", "Random"]
-    @IBOutlet weak var selectedFeed: UITextField!
+    var img: UIImage?
+
+    
+    
+    
+    @IBOutlet weak var selectedFeed: UILabel!
+    
+    
     @IBOutlet weak var ChooseFeedTableView: UITableView!
     
     
-    @IBOutlet weak var feedName: UILabel!
-    
     @IBAction func postButton(_ sender: Any) {
-        ImageFeed.threads[selectedFeed].append(passedInImage)
-        
-        
+        let alert = UIAlertController(title: "PostingSnap", message: "Posted!", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        performSegue(withIdentifier: "unwindChooseFeedToImagePicker", sender: self)
     }
     
-    override func reloadData() {}
     
-    //prepare for unwind segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,21 +59,24 @@ class ChooseFeedTableViewController: UITableViewController {
     }
  */
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseFeedCell", for: indexPath) as! ChooseFeedTableViewCell
-        feedName.text = feedNames[indexPath.row]
+        let type = threadNames[indexPath.row]
+        cell.feedName.text = type
         // Configure the cell...
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectItemAt indexPath: IndexPath) {
-        
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let typeToAdd = threadNames[indexPath.row]
+        selectedFeed.text = typeToAdd
+        threads[typeToAdd]!.append(img!)
         
                
     }

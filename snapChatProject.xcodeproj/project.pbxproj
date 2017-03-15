@@ -21,6 +21,7 @@
 		5B4F79FB1E77BD1400FB1BF9 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F79FA1E77BD1400FB1BF9 /* FeedTableViewController.swift */; };
 		5B73BF221E78A2A600ADBAED /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73BF211E78A2A600ADBAED /* FeedTableViewCell.swift */; };
 		5B7570021E787FD9006AC895 /* ChooseFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7570011E787FD9006AC895 /* ChooseFeedTableViewCell.swift */; };
+		5BCA4D481E78E42900EC3217 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCA4D471E78E42900EC3217 /* Snap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5B4F79FA1E77BD1400FB1BF9 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		5B73BF211E78A2A600ADBAED /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		5B7570011E787FD9006AC895 /* ChooseFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFeedTableViewCell.swift; sourceTree = "<group>"; };
+		5BCA4D471E78E42900EC3217 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				4196F2DC1E650ECA009916E4 /* ImageFeed.swift */,
+				5BCA4D471E78E42900EC3217 /* Snap.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				4196F2CB1E6509E8009916E4 /* AppDelegate.swift in Sources */,
 				4196F2ED1E6609B0009916E4 /* PostNavigationController.swift in Sources */,
 				5B73BF221E78A2A600ADBAED /* FeedTableViewCell.swift in Sources */,
+				5BCA4D481E78E42900EC3217 /* Snap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

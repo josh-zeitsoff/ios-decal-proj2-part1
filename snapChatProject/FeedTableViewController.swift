@@ -34,39 +34,39 @@ class FeedTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return feedNames.count
+        return threadNames.count
     }
  
+ 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return feedNames[section]
+        return threadNames[section]
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return posts[section].count
+        return threads[threadNames[section]]!.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedTableViewCell
-        cell.snapName.text = posts[indexPath.section][indexPath.row]
-        //cell.time =
-        cell.viewedImage.image = UIImage(named: "unread")
+        cell.snapName.text = "Josh"
+        cell.snapTime.text = "100"
         // Configure the cell...
 
         return cell
     }
     
-    //unwind stuff remember to link
-    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        <#code#>
-    }
+    
     
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         //display image
         //erase image
         //set to viewed
